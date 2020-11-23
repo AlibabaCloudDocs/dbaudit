@@ -1,0 +1,24 @@
+# C100版本升级（V2至V3）存储变更说明
+
+数据库审计C100的审计记录存储在阿里云日志服务SLS（Log Service）中。存储时长可设置为30~185天，日志服务依据存储时间自动清理过期审计记录。
+
+## 变更说明
+
+数据库审计C100版本由V2版本升级至V3版本后，所用的存储有以下变更：
+
+-   原**dbaudit-audit-dbaudit-cn-后缀**变更为**dbaudit-audit2-dbaudit-cn-后缀**。
+-   原**dbaudit-session-dbaudit-cn-后缀**变更为**dbaudit-session2-dbaudit-cn-后缀**。
+
+![数据库审计版本变更](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/0736399851/p94236.png)
+
+## 变更影响
+
+存储变更后可能会给您带来以下影响：
+
+-   如果在升级之前配置过**OSS备份**，那么您需要重新配置**OSS备份**。将备份的Logstore替换为**dbaudit-audit2-dbaudit-cn-后缀**，更多操作指导请参见[将日志服务数据投递到OSS](/cn.zh-CN/消费与投递/数据投递/投递日志到OSS/将日志服务数据投递到OSS.md)。
+-   版本升级后，默认存储时长将自动调整为185天。您可以自行调整存储时长，存储时长可设置为30~185天。
+-   版本升级后，您可以在**老版本数据**模块查询存储升级前的数据。完成升级后，您可以在**查询分析**模块查询升级后产生的数据。
+
+    ![老版本数据](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/0736399851/p94242.png)
+
+
