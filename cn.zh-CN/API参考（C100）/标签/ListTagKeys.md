@@ -15,7 +15,7 @@
  取值：ListTagKeys。 |
 |RegionId|String|是|cn-hangzhou|数据库审计实例的地域ID。
 
- 可以通过调用[DescribeRegions](~162344)接口获取地域ID。 |
+ 可以通过调用[DescribeRegions](~~162344~~)接口获取地域ID。 |
 |ResourceType|String|是|INSTANCE|资源类型定义。
 
  唯一取值：INSTANCE，表示审计实例。 |
