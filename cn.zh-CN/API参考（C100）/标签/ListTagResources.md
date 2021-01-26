@@ -15,7 +15,7 @@
  取值：ListTagResources。 |
 |RegionId|String|是|cn-hangzhou|数据库审计实例的地域ID。
 
- 可以通过调用[DescribeRegions](~162344)接口获取地域ID。 |
+ 可以通过调用[DescribeRegions](~~162344~~)接口获取地域ID。 |
 |ResourceType|String|是|INSTANCE|资源类型定义。
 
  唯一取值： INSTANCE，表示审计实例。 |
@@ -23,7 +23,7 @@
 
  N表示实例ID的序号，取值范围：1~20。
 
- 可以通过调用[DescribeInstances](~162343)接口获取的审计实例列表获取实例ID。 |
+ 可以通过调用[DescribeInstances](~~162343~~)接口获取的审计实例列表获取实例ID。 |
 |Tag.N.Key|String|否|test|实例的标签键。
 
  N表示标签键的序号，取值范围：1~20。 |
