@@ -13,9 +13,9 @@
 |Action|String|是|DescribeRegions|需要执行的操作。
 
  取值：**DescribeRegions**。 |
-|AcceptLanguage|String|否|zh-CN|根据中文、英文和日文筛选返回结果。默认值为**zh-CN**。取值：
+|AcceptLanguage|String|否|zh-CN|根据中文、英文和日文筛选返回结果。取值：
 
- -   **zh-CN**：中文
+ -   **zh-CN**：中文。**zh-CN**为默认值。
 -   **en-US**：英文
 -   **ja**：日文 |
 |RegionId|String|否|cn-hangzhou|区域ID。取值：
@@ -41,6 +41,10 @@
 -   **us-east-1**：美国（弗吉尼亚）
 -   **me-east-1**：阿联酋（迪拜） |
 
+调用API时，除了本文中该API的请求参数，还需加入阿里云API公共请求参数。公共请求参数的详细介绍，请参见[公共参数](~~148151~~)。
+
+调用API的请求格式，请参见本文示例中的请求示例。
+
 ## 返回数据
 
 |名称|类型|示例值|描述|
@@ -49,7 +53,7 @@
 |LocalName|String|华东1（杭州）|地域名称。 |
 |RegionEndpoint|String|yundun-dbaudit.aliyuncs.com|地域对应的接入地址。 |
 |RegionId|String|cn-hangzhou|地域ID。 |
-|RequestId|String|6C277285-7179-4B87-A517-0D61CE4CFD09|阿里云为该请求生成的唯一标识符。 |
+|RequestId|String|6C277285-7179-4B87-A517-0D61CE4CFD09|本次请求的ID。 |
 
 ## 示例
 
@@ -62,7 +66,7 @@ http(s)://[Endpoint]/?Action=DescribeRegions
 
 正常返回示例
 
-`XML` 格式
+`XML`格式
 
 ```
 <DescribeRegionsResponse>
@@ -114,52 +118,52 @@ http(s)://[Endpoint]/?Action=DescribeRegions
       </Regions>
       <Regions>
             <RegionId>ap-southeast-1</RegionId>
-            <RegionEndpoint>yundun-dbaudit.aliyuncs.com</RegionEndpoint>
+            <RegionEndpoint>dbaudit.ap-southeast-1.aliyuncs.com</RegionEndpoint>
             <LocalName>新加坡</LocalName>
       </Regions>
       <Regions>
             <RegionId>ap-southeast-2</RegionId>
-            <RegionEndpoint>yundun-dbaudit.aliyuncs.com</RegionEndpoint>
+            <RegionEndpoint>dbaudit.ap-southeast-2.aliyuncs.com</RegionEndpoint>
             <LocalName>澳大利亚（悉尼）</LocalName>
       </Regions>
       <Regions>
             <RegionId>ap-southeast-3</RegionId>
-            <RegionEndpoint>yundun-dbaudit.aliyuncs.com</RegionEndpoint>
+            <RegionEndpoint>dbaudit.ap-southeast-3.aliyuncs.com</RegionEndpoint>
             <LocalName>马来西亚（吉隆坡）</LocalName>
       </Regions>
       <Regions>
             <RegionId>ap-southeast-5</RegionId>
-            <RegionEndpoint>yundun-dbaudit.aliyuncs.com</RegionEndpoint>
+            <RegionEndpoint>dbaudit.ap-southeast-5.aliyuncs.com</RegionEndpoint>
             <LocalName>印度尼西亚（雅加达）</LocalName>
       </Regions>
       <Regions>
             <RegionId>ap-northeast-1</RegionId>
-            <RegionEndpoint>yundun-dbaudit.aliyuncs.com</RegionEndpoint>
+            <RegionEndpoint>dbaudit.ap-northeast-1.aliyuncs.com</RegionEndpoint>
             <LocalName>日本（东京）</LocalName>
       </Regions>
       <Regions>
             <RegionId>ap-south-1</RegionId>
-            <RegionEndpoint>yundun-dbaudit.aliyuncs.com</RegionEndpoint>
+            <RegionEndpoint>dbaudit.ap-south-1.aliyuncs.com</RegionEndpoint>
             <LocalName>印度（孟买）</LocalName>
       </Regions>
       <Regions>
             <RegionId>eu-central-1</RegionId>
-            <RegionEndpoint>yundun-dbaudit.aliyuncs.com</RegionEndpoint>
+            <RegionEndpoint>dbaudit.eu-central-1.aliyuncs.com</RegionEndpoint>
             <LocalName>德国（法兰克福）</LocalName>
       </Regions>
       <Regions>
             <RegionId>eu-west-1</RegionId>
-            <RegionEndpoint>yundun-dbaudit.aliyuncs.com</RegionEndpoint>
+            <RegionEndpoint>dbaudit.eu-west-1.aliyuncs.com</RegionEndpoint>
             <LocalName>英国（伦敦）</LocalName>
       </Regions>
       <Regions>
             <RegionId>us-west-1</RegionId>
-            <RegionEndpoint>yundun-dbaudit.aliyuncs.com</RegionEndpoint>
+            <RegionEndpoint>dbaudit.us-west-1.aliyuncs.com</RegionEndpoint>
             <LocalName>美国（硅谷）</LocalName>
       </Regions>
       <Regions>
             <RegionId>us-east-1</RegionId>
-            <RegionEndpoint>yundun-dbaudit.aliyuncs.com</RegionEndpoint>
+            <RegionEndpoint>dbaudit.us-west-1.aliyuncs.com</RegionEndpoint>
             <LocalName>美国（弗吉尼亚）</LocalName>
       </Regions>
       <Regions>
@@ -170,113 +174,113 @@ http(s)://[Endpoint]/?Action=DescribeRegions
 </DescribeRegionsResponse>
 ```
 
-`JSON` 格式
+`JSON`格式
 
 ```
 {
-	"RequestId":"6C277285-7179-4B87-A517-0D61CE4CFD09",
-	"Regions":[
-		{
-			"RegionId":"cn-hangzhou",
-			"RegionEndpoint":"yundun-dbaudit.aliyuncs.com",
-			"LocalName":"华东1（杭州）"
-		},
-		{
-			"RegionId":"cn-shanghai",
-			"RegionEndpoint":"yundun-dbaudit.aliyuncs.com",
-			"LocalName":"华东2（上海）"
-		},
-		{
-			"RegionId":"cn-qingdao",
-			"RegionEndpoint":"yundun-dbaudit.aliyuncs.com",
-			"LocalName":"华北1（青岛）"
-		},
-		{
-			"RegionId":"cn-beijing",
-			"RegionEndpoint":"yundun-dbaudit.aliyuncs.com",
-			"LocalName":"华北2（北京）"
-		},
-		{
-			"RegionId":"cn-zhangjiakou",
-			"RegionEndpoint":"yundun-dbaudit.aliyuncs.com",
-			"LocalName":"华北3（张家口）"
-		},
-		{
-			"RegionId":"cn-huhehaote",
-			"RegionEndpoint":"yundun-dbaudit.aliyuncs.com",
-			"LocalName":"华北5（呼和浩特）"
-		},
-		{
-			"RegionId":"cn-shenzhen",
-			"RegionEndpoint":"yundun-dbaudit.aliyuncs.com",
-			"LocalName":"华南1（深圳）"
-		},
-		{
-			"RegionId":"cn-chengdu",
-			"RegionEndpoint":"yundun-dbaudit.aliyuncs.com",
-			"LocalName":"西南1（成都）"
-		},
-		{
-			"RegionId":"cn-hongkong",
-			"RegionEndpoint":"yundun-dbaudit.aliyuncs.com",
-			"LocalName":"中国香港"
-		},
-		{
-			"RegionId":"ap-southeast-1",
-			"RegionEndpoint":"yundun-dbaudit.aliyuncs.com",
-			"LocalName":"新加坡"
-		},
-		{
-			"RegionId":"ap-southeast-2",
-			"RegionEndpoint":"yundun-dbaudit.aliyuncs.com",
-			"LocalName":"澳大利亚（悉尼）"
-		},
-		{
-			"RegionId":"ap-southeast-3",
-			"RegionEndpoint":"yundun-dbaudit.aliyuncs.com",
-			"LocalName":"马来西亚（吉隆坡）"
-		},
-		{
-			"RegionId":"ap-southeast-5",
-			"RegionEndpoint":"yundun-dbaudit.aliyuncs.com",
-			"LocalName":"印度尼西亚（雅加达）"
-		},
-		{
-			"RegionId":"ap-northeast-1",
-			"RegionEndpoint":"yundun-dbaudit.aliyuncs.com",
-			"LocalName":"日本（东京）"
-		},
-		{
-			"RegionId":"ap-south-1",
-			"RegionEndpoint":"yundun-dbaudit.aliyuncs.com",
-			"LocalName":"印度（孟买）"
-		},
-		{
-			"RegionId":"eu-central-1",
-			"RegionEndpoint":"yundun-dbaudit.aliyuncs.com",
-			"LocalName":"德国（法兰克福）"
-		},
-		{
-			"RegionId":"eu-west-1",
-			"RegionEndpoint":"yundun-dbaudit.aliyuncs.com",
-			"LocalName":"英国（伦敦）"
-		},
-		{
-			"RegionId":"us-west-1",
-			"RegionEndpoint":"yundun-dbaudit.aliyuncs.com",
-			"LocalName":"美国（硅谷）"
-		},
-		{
-			"RegionId":"us-east-1",
-			"RegionEndpoint":"yundun-dbaudit.aliyuncs.com",
-			"LocalName":"美国（弗吉尼亚）"
-		},
-		{
-			"RegionId":"me-east-1",
-			"RegionEndpoint":"yundun-dbaudit.aliyuncs.com",
-			"LocalName":"阿联酋（迪拜）"
-		}
-	]
+    "RequestId":"6C277285-7179-4B87-A517-0D61CE4CFD09",
+    "Regions":[
+        {
+            "RegionId":"cn-hangzhou",
+            "RegionEndpoint":"yundun-dbaudit.aliyuncs.com",
+            "LocalName":"华东1（杭州）"
+        },
+        {
+            "RegionId":"cn-shanghai",
+            "RegionEndpoint":"yundun-dbaudit.aliyuncs.com",
+            "LocalName":"华东2（上海）"
+        },
+        {
+            "RegionId":"cn-qingdao",
+            "RegionEndpoint":"yundun-dbaudit.aliyuncs.com",
+            "LocalName":"华北1（青岛）"
+        },
+        {
+            "RegionId":"cn-beijing",
+            "RegionEndpoint":"yundun-dbaudit.aliyuncs.com",
+            "LocalName":"华北2（北京）"
+        },
+        {
+            "RegionId":"cn-zhangjiakou",
+            "RegionEndpoint":"yundun-dbaudit.aliyuncs.com",
+            "LocalName":"华北3（张家口）"
+        },
+        {
+            "RegionId":"cn-huhehaote",
+            "RegionEndpoint":"yundun-dbaudit.aliyuncs.com",
+            "LocalName":"华北5（呼和浩特）"
+        },
+        {
+            "RegionId":"cn-shenzhen",
+            "RegionEndpoint":"yundun-dbaudit.aliyuncs.com",
+            "LocalName":"华南1（深圳）"
+        },
+        {
+            "RegionId":"cn-chengdu",
+            "RegionEndpoint":"yundun-dbaudit.aliyuncs.com",
+            "LocalName":"西南1（成都）"
+        },
+        {
+            "RegionId":"cn-hongkong",
+            "RegionEndpoint":"yundun-dbaudit.aliyuncs.com",
+            "LocalName":"中国香港"
+        },
+        {
+            "RegionId":"ap-southeast-1",
+            "RegionEndpoint":"dbaudit.ap-southeast-1.aliyuncs.com",
+            "LocalName":"新加坡"
+        },
+        {
+            "RegionId":"ap-southeast-2",
+            "RegionEndpoint":"dbaudit.ap-southeast-2.aliyuncs.com",
+            "LocalName":"澳大利亚（悉尼）"
+        },
+        {
+            "RegionId":"ap-southeast-3",
+            "RegionEndpoint":"dbaudit.ap-southeast-3.aliyuncs.com",
+            "LocalName":"马来西亚（吉隆坡）"
+        },
+        {
+            "RegionId":"ap-southeast-5",
+            "RegionEndpoint":"dbaudit.ap-southeast-5.aliyuncs.com",
+            "LocalName":"印度尼西亚（雅加达）"
+        },
+        {
+            "RegionId":"ap-northeast-1",
+            "RegionEndpoint":"dbaudit.ap-northeast-1.aliyuncs.com",
+            "LocalName":"日本（东京）"
+        },
+        {
+            "RegionId":"ap-south-1",
+            "RegionEndpoint":"dbaudit.ap-south-1.aliyuncs.com",
+            "LocalName":"印度（孟买）"
+        },
+        {
+            "RegionId":"eu-central-1",
+            "RegionEndpoint":"dbaudit.eu-central-1.aliyuncs.com",
+            "LocalName":"德国（法兰克福）"
+        },
+        {
+            "RegionId":"eu-west-1",
+            "RegionEndpoint":"dbaudit.eu-west-1.aliyuncs.com",
+            "LocalName":"英国（伦敦）"
+        },
+        {
+            "RegionId":"us-west-1",
+            "RegionEndpoint":"dbaudit.us-west-1.aliyuncs.com",
+            "LocalName":"美国（硅谷）"
+        },
+        {
+            "RegionId":"us-east-1",
+            "RegionEndpoint":"dbaudit.us-west-1.aliyuncs.com",
+            "LocalName":"美国（弗吉尼亚）"
+        },
+        {
+            "RegionId":"me-east-1",
+            "RegionEndpoint":"yundun-dbaudit.aliyuncs.com",
+            "LocalName":"阿联酋（迪拜）"
+        }
+    ]
 }
 ```
 
