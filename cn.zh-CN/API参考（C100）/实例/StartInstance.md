@@ -13,15 +13,15 @@
 |Action|String|是|StartInstance|要执行的操作。
 
  取值：StartInstance。 |
-|InstanceId|String|是|dbaudit-cn-78v1gcxxxxx|审计的实例ID。
+|InstanceId|String|是|dbaudit-cn-78v1gc\*\*\*\*|审计的实例ID。
 
- 可以通过调用[DescribeInstances](~162343)接口获取的审计实例列表获取实例ID。 |
-|VswitchId|String|是|vsw-bp1kep1f0k5fnyfsxxxxx|实例绑定的交换机ID。
+ 可以通过调用[DescribeInstances](~~162343~~)接口获取的审计实例列表获取实例ID。 |
+|VswitchId|String|是|vsw-bp1kep1f0k5fnyfs\*\*\*\*|实例绑定的交换机ID。
 
- 可以调用VPC的[DescribeVSwitches](~35748)接口获取VswitchId。需要确保对应VSwitch有1个或1个以上可用的IP地址，数据库审计将在对应VSwitch下占用一个IP地址提供内网服务。 |
+ 可以调用VPC的[DescribeVSwitches](~~35748~~)接口获取VswitchId。需要确保对应VSwitch有1个或1个以上可用的IP地址，数据库审计将在对应VSwitch下占用一个IP地址提供内网服务。 |
 |RegionId|String|否|cn-hangzhou|数据库审计实例的地域ID。
 
- 可以通过调用[DescribeInstances](~162343)接口获取的审计实例列表获取地域ID。 |
+ 可以通过调用[DescribeRegions](~~162344~~)接口获取地域ID。 |
 
 调用API时，除了本文中该API的请求参数，还需加入阿里云API公共请求参数。公共请求参数的详细介绍，请参见[公共参数](~~148151~~)。
 
@@ -31,8 +31,8 @@
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
-|InstanceId|String|dbaudit-cn-78v1gcxxxxx|实例ID。 |
-|RequestId|String|8FB3BB6D-D1A2-4637-AF72-7BF279291E0C|请求ID。 |
+|InstanceId|String|dbaudit-cn-78v1gc\*\*\*\*|本次请求的实例ID。 |
+|RequestId|String|8FB3BB6D-D1A2-4637-AF72-7BF279291E0C|本次请求的ID。 |
 
 ## 示例
 
@@ -40,25 +40,27 @@
 
 ```
 http(s)://[Endpoint]/?Action=StartInstance
-&InstanceId=dbaudit-cn-78v1gcxxxxx
-&VswitchId=vsw-bp1kep1f0k5fnyfsxxxxx
+&InstanceId=dbaudit-cn-78v1gc****
+&VswitchId=vsw-bp1kep1f0k5fnyfs****
 &<公共请求参数>
 ```
 
 正常返回示例
 
-`XML` 格式
+`XML`格式
 
 ```
-<InstanceId>dbaudit-cn-78v1gcxxxxx</InstanceId>
-<RequestId>8FB3BB6D-D1A2-4637-AF72-7BF279291E0C</RequestId>
+<StartInstance>
+  <InstanceId>dbaudit-cn-78v1gc****</InstanceId>
+  <RequestId>8FB3BB6D-D1A2-4637-AF72-7BF279291E0C</RequestId>
+</StartInstance>
 ```
 
-`JSON` 格式
+`JSON`格式
 
 ```
 {
-"InstanceId":"dbaudit-cn-78v1gcxxxxx",
+"InstanceId":"dbaudit-cn-78v1gc****",
 "RequestId":"8FB3BB6D-D1A2-4637-AF72-7BF279291E0C"
 }
 ```
