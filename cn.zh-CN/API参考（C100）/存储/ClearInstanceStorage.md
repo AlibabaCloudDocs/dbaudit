@@ -1,6 +1,6 @@
 # ClearInstanceStorage
 
-调用ClearInstanceStorage清空指定实例存储。
+数据库审计的审计日志可以存放在多个存储空间中，调用ClearInstanceStorage清除指定存储空间的审计日志存储数据。
 
 ## 调试
 
@@ -12,11 +12,19 @@
 |--|--|----|---|--|
 |Action|String|是|ClearInstanceStorage|要执行的操作。
 
-取值：ClearInstanceStorage。 |
-|InstanceId|String|是|dbaudit-cn-78v1gcxxxxx|审计的实例ID。 |
-|StorageCategory|String|是|dbaudit-audit-dbaudit-cn-78v1gcxxxxx|存储类别（原始日志）。 |
-|StorageSpace|String|是|dbaudit-cn-78v1gcxxxxx|存储空间。 |
-|RegionId|String|否|cn-hangzhou|地域ID。 |
+ 取值：ClearInstanceStorage。 |
+|InstanceId|String|是|dbaudit-cn-78v1gc\*\*\*\*|审计的实例ID。
+
+ 可以通过调用[DescribeInstances](~~162343~~)接口获取的审计实例列表获取实例ID。 |
+|StorageCategory|String|是|dbaudit-audit-dbaudit-cn-78v1gc\*\*\*\*|实例的存储类别（原始日志）。
+
+ 可以通过调用[DescribeInstanceStorage](~~162342~~)接口获取。 |
+|StorageSpace|String|是|dbaudit-cn-78v1gc\*\*\*\*|实例的存储空间。
+
+ 可以通过调用[DescribeInstanceStorage](~~162342~~)接口获取。 |
+|RegionId|String|否|cn-hangzhou|数据库审计实例的地域ID。
+
+ 可以通过调用[DescribeRegions](~~162344~~)接口获取地域ID。 |
 
 调用API时，除了本文中该API的请求参数，还需加入阿里云API公共请求参数。公共请求参数的详细介绍，请参见[公共参数](~~148151~~)。
 
@@ -26,8 +34,8 @@
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
-|InstanceId|String|dbaudit-cn-78v1gcxxxxx|实例ID。 |
-|RequestId|String|482EF142-BFA5-43FF-B4B0-84A4B0763639|请求ID。 |
+|InstanceId|String|dbaudit-cn-78v1gc\*\*\*\*|本次请求的实例ID。 |
+|RequestId|String|482EF142-BFA5-43FF-B4B0-84A4B0763639|本次请求的ID。 |
 
 ## 示例
 
@@ -35,27 +43,29 @@
 
 ```
 http(s)://[Endpoint]/?Action=ClearInstanceStorage
-&InstanceId=dbaudit-cn-78v1gcxxxxx
-&StorageCategory=dbaudit-audit-dbaudit-cn-78v1gcxxxxx
-&StorageSpace=dbaudit-cn-78v1gcxxxxx
+&InstanceId=dbaudit-cn-78v1gc****
+&StorageCategory=dbaudit-audit-dbaudit-cn-78v1gc****
+&StorageSpace=dbaudit-cn-78v1gc****
 &<公共请求参数>
 ```
 
 正常返回示例
 
-`XML` 格式
+`XML`格式
 
 ```
-<RequestId>482EF142-BFA5-43FF-B4B0-84A4B0763639</RequestId>
-<InstanceId>dbaudit-cn-78v1gcxxxxx</InstanceId>
+<ClearInstanceStorage>
+  <RequestId>482EF142-BFA5-43FF-B4B0-84A4B0763639</RequestId>
+  <InstanceId>dbaudit-cn-78v1gc****</InstanceId>
+</ClearInstanceStorage>
 ```
 
-`JSON` 格式
+`JSON`格式
 
 ```
 {
-    "RequestId":"482EF142-BFA5-43FF-B4B0-84A4B0763639",
-    "InstanceId":"dbaudit-cn-78v1gcxxxxx"
+	"RequestId":"482EF142-BFA5-43FF-B4B0-84A4B0763639",
+	"InstanceId":"dbaudit-cn-78v1gc****"
 }
 ```
 
