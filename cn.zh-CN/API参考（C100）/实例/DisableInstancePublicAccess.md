@@ -1,6 +1,6 @@
 # DisableInstancePublicAccess
 
-调用DisableInstancePublicAccess关闭实例的公网访问能力。
+调用DisableInstancePublicAccess关闭指定数据库审计实例对公网流量的审计能力。
 
 ## 调试
 
@@ -13,8 +13,12 @@
 |Action|String|是|DisableInstancePublicAccess|要执行的操作。
 
  取值：DisableInstancePublicAccess。 |
-|InstanceId|String|是|dbaudit-cn-78v1gcxxxxx|实例ID。 |
-|RegionId|String|否|cn-hangzhou|地域ID。 |
+|InstanceId|String|是|dbaudit-cn-78v1gc\*\*\*\*|审计的实例ID。
+
+ 可以通过调用[DescribeInstances](~~162343~~)接口获取的审计实例列表获取实例ID。 |
+|RegionId|String|否|cn-hangzhou|数据库审计实例的地域ID。
+
+ 可以通过调用[DescribeRegions](~~162344~~)接口获取地域ID。 |
 
 调用API时，除了本文中该API的请求参数，还需加入阿里云API公共请求参数。公共请求参数的详细介绍，请参见[公共参数](~~148151~~)。
 
@@ -24,8 +28,8 @@
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
-|InstanceId|String|dbaudit-cn-78v1gcxxxxx|实例ID。 |
-|RequestId|String|4A1923F8-FD4F-4F97-B2CF-D0F4D878C26D|请求ID。 |
+|InstanceId|String|dbaudit-cn-78v1gc\*\*\*\*|本次请求的实例ID。 |
+|RequestId|String|4A1923F8-FD4F-4F97-B2CF-D0F4D878C26D|本次请求的ID。 |
 
 ## 示例
 
@@ -33,25 +37,27 @@
 
 ```
 http(s)://[Endpoint]/?Action=DisableInstancePublicAccess
-&InstanceId=dbaudit-cn-78v1gcxxxxx
+&InstanceId=dbaudit-cn-78v1gc****
 &<公共请求参数>
 ```
 
 正常返回示例
 
-`XML` 格式
+`XML`格式
 
 ```
-<RequestId>4A1923F8-FD4F-4F97-B2CF-D0F4D878C26D</RequestId>
-<InstanceId>dbaudit-cn-78v1gcxxxxx</InstanceId>
+<DisableInstancePublicAccess>
+  <RequestId>4A1923F8-FD4F-4F97-B2CF-D0F4D878C26D</RequestId>
+  <InstanceId>dbaudit-cn-78v1gc****</InstanceId>
+</DisableInstancePublicAccess>
 ```
 
-`JSON` 格式
+`JSON`格式
 
 ```
 {
 	"RequestId":"4A1923F8-FD4F-4F97-B2CF-D0F4D878C26D",
-	"InstanceId":"dbaudit-cn-78v1gcxxxxx"
+	"InstanceId":"dbaudit-cn-78v1gc****"
 }
 ```
 
