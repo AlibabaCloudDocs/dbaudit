@@ -2,6 +2,16 @@
 
 数据库审计提供以下API。
 
+## 开通数据库审计实例
+
+|API|描述|
+|---|--|
+|[CreateInstance](/cn.zh-CN/API参考（C100）/开通数据库审计实例/CreateInstance.md)|调用CreateInstance创建一个实例，并自动支付。|
+|[QueryAvailableInstances](/cn.zh-CN/API参考（C100）/开通数据库审计实例/QueryAvailableInstances.md)|调用QueryAvailableInstances查询用户的实例列表。|
+|[ModifyInstance](/cn.zh-CN/API参考（C100）/开通数据库审计实例/ModifyInstance.md)|调用ModifyInstance对实例资源配置进行变更，并自动支付。|
+|[RenewInstance](/cn.zh-CN/API参考（C100）/开通数据库审计实例/RenewInstance.md)|调用RenewInstance对实例进行续费。|
+|[SetRenewal]()|调用SetRenewal为一个实例设置自动续费服务。|
+
 ## 标签
 
 |API|描述|
@@ -42,7 +52,7 @@
 
 |API|描述|
 |---|--|
-|[DescribeInstanceStorage]()|调用DescribeInstanceStorage查询实例存储信息。|
+|[DescribeInstanceStorage](/cn.zh-CN/API参考（C100）/存储/DescribeInstanceStorage.md)|调用DescribeInstanceStorage查询实例存储信息。|
 |[ModifyInstanceStorage](/cn.zh-CN/API参考（C100）/存储/ModifyInstanceStorage.md)|调用ModifyInstanceStorage修改指定实例的存储信息。|
-|[ClearInstanceStorage](/cn.zh-CN/API参考（C100）/存储/ClearInstanceStorage.md)|调用ClearInstanceStorage清空指定实例存储。|
+|[ClearInstanceStorage](/cn.zh-CN/API参考（C100）/存储/ClearInstanceStorage.md)|调用ClearInstanceStorage清空指定实例存储数据。|
 
