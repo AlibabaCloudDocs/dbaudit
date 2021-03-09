@@ -13,9 +13,9 @@
 
 |API|描述|
 |---|--|
-|[CreateInstance]()|调用**CreateInstance**创建一个实例，并自动支付。|
-|[QueryAvailableInstances]()|调用**QueryAvailableInstances**查询用户的实例列表。|
-|[ModifyInstance]()|调用**ModifyInstance**对实例资源配置进行变更，并自动支付。|
-|[RenewInstance]()|调用**RenewInstance**对实例进行续费。|
-|[SetRenewal]()|调用**SetRenewal**为一个实例设置自动续费服务。|
+|[CreateInstance](/cn.zh-CN/API参考（C100）/开通数据库审计实例/CreateInstance.md)|调用**CreateInstance**创建一个实例，并自动支付。|
+|[QueryAvailableInstances](/cn.zh-CN/API参考（C100）/开通数据库审计实例/QueryAvailableInstances.md)|调用**QueryAvailableInstances**查询用户的实例列表。|
+|[ModifyInstance](/cn.zh-CN/API参考（C100）/开通数据库审计实例/ModifyInstance.md)|调用**ModifyInstance**对实例资源配置进行变更，并自动支付。|
+|[RenewInstance](/cn.zh-CN/API参考（C100）/开通数据库审计实例/RenewInstance.md)|调用**RenewInstance**对实例进行续费。|
+|[SetRenewal](/cn.zh-CN/API参考（C100）/开通数据库审计实例/SetRenewal.md)|调用**SetRenewal**为一个实例设置自动续费服务。|
 
