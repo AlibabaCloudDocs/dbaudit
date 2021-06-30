@@ -18,7 +18,7 @@
  可以通过调用[DescribeInstances](~~162343~~)接口获取的审计实例列表获取实例ID。 |
 |VswitchId|String|是|vsw-bp1kep1f0k5fnyfs\*\*\*\*|实例绑定的交换机ID。
 
- 可以调用VPC的[DescribeVSwitches](~~35748~~)接口获取VswitchId。需要确保对应VSwitch有1个或1个以上可用的IP地址，数据库审计将在对应VSwitch下占用一个IP地址提供内网服务。 |
+ 可以调用VPC的[DescribeVSwitches](~~35748~~)接口获取VswitchId。需要确保对应vSwitch有1个或1个以上可用的IP地址，数据库审计将在对应vSwitch下占用一个IP地址提供内网服务。 |
 |RegionId|String|否|cn-hangzhou|数据库审计实例的地域ID。
 
  可以通过调用[DescribeRegions](~~162344~~)接口获取地域ID。 |
